@@ -17,4 +17,3 @@ steps:
   inputs:
     repository: 'nginx:latest'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
