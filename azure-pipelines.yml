@@ -13,8 +13,8 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- task: AzureWebAppContainer@1
+- task: Docker@2
   inputs:
-    azureSubscription: 'AW Academy FI (397dc614-480f-46f5-a35f-d4e5d10d1095)'
-    appName: 'cicdpetrusdmem'
-    containers: 'petruscar.azurecr.io/checkpointnginx:v1'
+    repository: 'nginx:latest'
+    command: 'buildAndPush'
+    Dockerfile: '**/Dockerfile'
